@@ -1,0 +1,1377 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='UTF-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>Nu Web Group project- Cucumber Framework</title>
+
+	<style type='text/css'>
+			
+            
+
+      
+        
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow bdd-report'>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Nu Web Group project project - Cucumber Report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Apr 6, 2021 12:16:39 AM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.2</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>@Smoke</a></li>
+					<li><a href='#'>@Sanity</a></li>
+					<li><a href='#'>@Smoke,</a></li>
+					<li><a href='#'>@Regression</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Features</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> feature(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Scenarios</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>8</span> scenario(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m4 l4 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>83</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Features</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Buy tickets for one or multiple events functionality</span>
+						<span class='test-time'>Apr 6, 2021 12:16:39 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='2' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Smoke</span>
+	</div>
+	<span class='duration right label'>0h 0m 18s+262ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify user is able to Buy tickets for one or multiple events</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='3' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given User is on nu web group home page</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='4' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on sign in feature</span>
+				<div class='pre'>Clicking on Sign In Feature[[ChromeDriver: chrome on WINDOWS (a41e4113e3e8084b96ed62779a5ec9af)] -> xpath: //a[contains(text(),'Sign In')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='5' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User Enter Email address on Email field "pdhanani44@hotmail.com"</span>
+				<div class='pre'>Enter Email address pdhanani44@hotmail.comOn Email address Field [[ChromeDriver: chrome on WINDOWS (a41e4113e3e8084b96ed62779a5ec9af)] -> xpath: //input[@id='email']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='6' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User Enter Password on Password field "Nutickets123"</span>
+				<div class='pre'>Enter password Nutickets123On Password Field [[ChromeDriver: chrome on WINDOWS (a41e4113e3e8084b96ed62779a5ec9af)] -> xpath: //input[@id='password']]<br></div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='7' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on Sign In button</span>
+				<div class='pre'>Clicking on Sign in button [[ChromeDriver: chrome on WINDOWS (a41e4113e3e8084b96ed62779a5ec9af)] -> xpath: //button[contains(text(),'Sign In')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='8' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When User click on manage events feature</span>
+				<div class='pre'>Clicking on Manage Events Feature[[ChromeDriver: chrome on WINDOWS (a41e4113e3e8084b96ed62779a5ec9af)] -> xpath: //dt[contains(text(),'Manage events')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='9' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on Sample Event</span>
+				<div class='pre'>Clicking on Sample Event[[ChromeDriver: chrome on WINDOWS (a41e4113e3e8084b96ed62779a5ec9af)] -> xpath: //span[contains(text(),'Sample Event')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='10' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on View event feature</span>
+				<div class='pre'>Clicking on View Event[[ChromeDriver: chrome on WINDOWS (a41e4113e3e8084b96ed62779a5ec9af)] -> xpath: //span[contains(text(),'View event')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>Check and download sales report functionality</span>
+						<span class='test-time'>Apr 6, 2021 12:16:59 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='12' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Sanity</span>
+	</div>
+	<span class='duration right label'>0h 0m 18s+207ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify user is able to check and download sales report</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='13' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given User is on nu web group home page</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='14' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on sign in feature</span>
+				<div class='pre'>Clicking on Sign In Feature[[ChromeDriver: chrome on WINDOWS (c60591b361b4619471c1ec488c8dc601)] -> xpath: //a[contains(text(),'Sign In')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='15' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User Enter Email address on Email field "pdhanani44@hotmail.com"</span>
+				<div class='pre'>Enter Email address pdhanani44@hotmail.comOn Email address Field [[ChromeDriver: chrome on WINDOWS (c60591b361b4619471c1ec488c8dc601)] -> xpath: //input[@id='email']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='16' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User Enter Password on Password field "Nutickets123"</span>
+				<div class='pre'>Enter password Nutickets123On Password Field [[ChromeDriver: chrome on WINDOWS (c60591b361b4619471c1ec488c8dc601)] -> xpath: //input[@id='password']]<br></div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='17' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on Sign In button</span>
+				<div class='pre'>Clicking on Sign in button [[ChromeDriver: chrome on WINDOWS (c60591b361b4619471c1ec488c8dc601)] -> xpath: //button[contains(text(),'Sign In')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='18' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When User click on Reports feature</span>
+				<div class='pre'>scroll Down window</div>
+				<div class='pre'>Clicking on Reports Feature[[ChromeDriver: chrome on WINDOWS (c60591b361b4619471c1ec488c8dc601)] -> xpath: //body/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/nav[1]/div[1]/div[8]/a[1]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='19' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on Company sales report feature</span>
+				<div class='pre'>Clicking on Company Sales Report Feature[[ChromeDriver: chrome on WINDOWS (c60591b361b4619471c1ec488c8dc601)] -> xpath: //a[contains(text(),'Company sales report')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='20' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User Click on Download as feature to download XLSX Report</span>
+				<div class='pre'>Clicking On Download As Feature[[ChromeDriver: chrome on WINDOWS (c60591b361b4619471c1ec488c8dc601)] -> css selector: select[class='form-select block mx-3']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='21' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on Download as feature to download CSV Report</span>
+				<div class='pre'>Clicking On Download As Feature[[ChromeDriver: chrome on WINDOWS (c60591b361b4619471c1ec488c8dc601)] -> css selector: select[class='form-select block mx-3']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='22' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on Download as feature to download TSV Report</span>
+				<div class='pre'>Clicking On Download As Feature[[ChromeDriver: chrome on WINDOWS (c60591b361b4619471c1ec488c8dc601)] -> css selector: select[class='form-select block mx-3']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='23' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on Download as feature to download ODS Report</span>
+				<div class='pre'>Clicking On Download As Feature[[ChromeDriver: chrome on WINDOWS (c60591b361b4619471c1ec488c8dc601)] -> css selector: select[class='form-select block mx-3']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='24' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on Download as feature to download XLS Report</span>
+				<div class='pre'>Clicking On Download As Feature[[ChromeDriver: chrome on WINDOWS (c60591b361b4619471c1ec488c8dc601)] -> css selector: select[class='form-select block mx-3']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='25' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on Download as feature to download HTML Report</span>
+				<div class='pre'>Clicking On Download As Feature[[ChromeDriver: chrome on WINDOWS (c60591b361b4619471c1ec488c8dc601)] -> css selector: select[class='form-select block mx-3']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='26' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then User should download Reports successfully</span>
+				<div class='pre'>Getting Report Download Text[[ChromeDriver: chrome on WINDOWS (c60591b361b4619471c1ec488c8dc601)] -> css selector: select[class='form-select block mx-3']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>Create events functionality</span>
+						<span class='test-time'>Apr 6, 2021 12:17:24 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenariooutline node' test-id='28' status='pass'>
+	<span class='duration right label'>0h 0m 25s+748ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Verify User is able to create one or several events with at least one tickets type with limited stock</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='29' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@Sanity</span>
+				<span class='category label white-text'>@Smoke,</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Verify User is able to create one or several events with at least one tickets type with limited stock</span>
+			
+				<ul class='steps'>
+					<li test-id='30' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is on nu web group home page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='31' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on sign in feature</span>
+							<div class='pre'>Clicking on Sign In Feature[[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //a[contains(text(),'Sign In')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='32' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Enter Email address on Email field "pdhanani44@hotmail.com"</span>
+							<div class='pre'>Enter Email address pdhanani44@hotmail.comOn Email address Field [[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //input[@id='email']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='33' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Enter Password on Password field "Nutickets123"</span>
+							<div class='pre'>Enter password Nutickets123On Password Field [[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //input[@id='password']]<br></div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='34' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on Sign In button</span>
+							<div class='pre'>Clicking on Sign in button [[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //button[contains(text(),'Sign In')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='35' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When User click on Add new event feature</span>
+							<div class='pre'>Clicking on Add New Event Feature[[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //span[contains(text(),'Add new event')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='36' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enter event name on event name field "Dhanani Event"</span>
+							<div class='pre'>Enter Event Name Dhanani EventOn Event Name Field [[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //body/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/form[1]/div[2]/div[2]/div[1]/div[1]/div[1]/label[1]/span[4]/input[1]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='37' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enter event description on event description field "Limited stock"</span>
+							<div class='pre'>Enter Event Description Limited stockOn Event Description Field [[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //body/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/form[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='38' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on next button</span>
+							<div class='pre'>Clicking on Next Button[[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //button[contains(text(),'Next')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='39' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on Venue</span>
+							<div class='pre'>Clicking on Venue Button[[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //span[contains(text(),'Select existing venue')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='40' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User select venue from select existing venue</span>
+							<div class='pre'>Select Venue From Drop Down Menu[[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //body[1]/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/form[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/label[1]/span[4]/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/span[1]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='41' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on Start date calendar enter Start date "24/12/2021"</span>
+							<div class='pre'>Enter Start Date24/12/2021On Start Date Field [[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //body/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/form[1]/div[2]/div[2]/div[1]/div[1]/div[4]/label[1]/span[4]/div[1]/div[1]/div[1]/span[2]/input[1]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='42' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on Start time field and enter Start time "01:00"</span>
+							<div class='pre'>Enter Start Time01:00On Start Time Field [[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //body/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/form[1]/div[2]/div[2]/div[1]/div[1]/div[4]/label[1]/span[4]/div[1]/div[1]/div[2]/div[1]/div[1]/input[1]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='43' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on End time field and enter End time "06:00"</span>
+							<div class='pre'>Enter End Time06:00On End Time Field [[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //body/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/form[1]/div[2]/div[2]/div[1]/div[1]/div[4]/label[1]/span[4]/div[1]/div[1]/div[4]/div[1]/div[1]/input[1]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='44' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on Next button feature</span>
+							<div class='pre'>Clicking on Next Button Feature[[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //button[contains(text(),'Next')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='45' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Enter Ticket name on Ticket name field "PDD ticket"</span>
+							<div class='pre'>Enter Ticket Name PDD ticketOn Ticket Name Field [[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //body/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/form[1]/div[2]/div[2]/div[1]/div[1]/div[1]/label[1]/span[4]/input[1]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='46' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Enter Ticket description on Ticket description field "With Limited stock"</span>
+							<div class='pre'>Enter Ticket DescriptionWith Limited stockOn Ticket Description Field [[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //body/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/form[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[2]/div[1]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='47' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on next btn</span>
+							<div class='pre'>Clicking on Next Button Feature[[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //button[contains(text(),'Next')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='48' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on Pricing GBP feature</span>
+							<div class='pre'>Clicking on Pricing GBP Button[[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //body/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/form[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/label[1]/div[1]/label[1]/span[1]/span[2]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='49' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User enter any Base price in Base price field "1"</span>
+							<div class='pre'>Enter Base Price1On Base Price Field [[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //body/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/form[1]/div[2]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/label[1]/span[4]/div[1]/div[1]/input[1]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='50' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on Preview event</span>
+							<div class='pre'>Clicking on Preview Event feature[[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //button[contains(text(),'Preview event')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='51' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on save and publish button</span>
+							<div class='pre'>Clicking on Save And Publish feature[[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //button[contains(text(),'Save & publish')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='52' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then Event organiser should published event successfully</span>
+							<div class='pre'>Getting text message event were published successfully[[ChromeDriver: chrome on WINDOWS (8b47a361739321f2ec093413b1145b78)] -> xpath: //p[contains(text(),'The selected event(s) were published successfully')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='53'>
+					<div class='test-heading'>
+						<span class='test-name'>Create a new user role that can access all the Events functionality</span>
+						<span class='test-time'>Apr 6, 2021 12:17:53 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='54' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Sanity</span>
+	</div>
+	<span class='duration right label'>0h 0m 16s+105ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify User is able to Create a new user role that can access all the Events, Venues and Orders</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='55' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given User is on nu web group home page</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='56' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on sign in feature</span>
+				<div class='pre'>Clicking on Sign In Feature[[ChromeDriver: chrome on WINDOWS (970a1d6ff2142645427bb9f167694a45)] -> xpath: //a[contains(text(),'Sign In')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='57' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User Enter Email address on Email field "pdhanani44@hotmail.com"</span>
+				<div class='pre'>Enter Email address pdhanani44@hotmail.comOn Email address Field [[ChromeDriver: chrome on WINDOWS (970a1d6ff2142645427bb9f167694a45)] -> xpath: //input[@id='email']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='58' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User Enter Password on Password field "Nutickets123"</span>
+				<div class='pre'>Enter password Nutickets123On Password Field [[ChromeDriver: chrome on WINDOWS (970a1d6ff2142645427bb9f167694a45)] -> xpath: //input[@id='password']]<br></div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='59' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on Sign In button</span>
+				<div class='pre'>Clicking on Sign in button [[ChromeDriver: chrome on WINDOWS (970a1d6ff2142645427bb9f167694a45)] -> xpath: //button[contains(text(),'Sign In')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='60' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When User click on Manage users feature</span>
+				<div class='pre'>Clicking on Manage Users Feature[[ChromeDriver: chrome on WINDOWS (970a1d6ff2142645427bb9f167694a45)] -> xpath: //body/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/nav[1]/div[1]/div[5]/div[1]/div[1]/div[1]/div[1]/a[1]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='61' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on Add user feature</span>
+				<div class='pre'>Clicking On Add User Feature[[ChromeDriver: chrome on WINDOWS (970a1d6ff2142645427bb9f167694a45)] -> xpath: //span[contains(text(),'Add user')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='62' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User enter Name on Name field</span>
+				<div class='pre'>Enter NamejackN4OcuOn Name Field [[ChromeDriver: chrome on WINDOWS (970a1d6ff2142645427bb9f167694a45)] -> xpath: //body/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/form[1]/div[1]/div[2]/div[1]/div[1]/div[1]/label[1]/span[4]/input[1]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='63' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User enter Email on Email field</span>
+				<div class='pre'>Enter EmailjackpMqS5@hotmail.comOn Email Field [[ChromeDriver: chrome on WINDOWS (970a1d6ff2142645427bb9f167694a45)] -> xpath: //body/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/form[1]/div[1]/div[2]/div[1]/div[1]/div[2]/label[1]/span[4]/input[1]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='64' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User enter Password on Password field</span>
+				<div class='pre'>Enter PasswordPeter1v2U1zOn Password Field [[ChromeDriver: chrome on WINDOWS (970a1d6ff2142645427bb9f167694a45)] -> xpath: //body/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/form[1]/div[1]/div[2]/div[1]/div[1]/div[3]/label[1]/span[4]/input[1]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='65' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on submit Feature</span>
+				<div class='pre'>Clicking On Create User Submit Feature[[ChromeDriver: chrome on WINDOWS (970a1d6ff2142645427bb9f167694a45)] -> xpath: //button[contains(text(),'Submit')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='66' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then User should created successfully</span>
+				<div class='pre'>Getting User Created Text Message[[ChromeDriver: chrome on WINDOWS (970a1d6ff2142645427bb9f167694a45)] -> xpath: //p[contains(text(),'User was created successfully')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='67'>
+					<div class='test-heading'>
+						<span class='test-name'>Event attendance and order section functionality</span>
+						<span class='test-time'>Apr 6, 2021 12:18:10 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenario node' test-id='68' status='pass'>
+	<div class='category-list'>
+		<span class='category label white-text'>@Smoke</span>
+	</div>
+	<span class='duration right label'>0h 0m 15s+115ms</span>
+	<div class='desc'>
+		<b>Scenario</b>
+		<span class="desc-text">Verify Event organiser can see Event attendance list and the orders section</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='69' class='node given pass' status='pass'>
+			
+			<b>Given</b>
+			
+			<span class="bdd-step-name">Given User is on nu web group home page</span>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='70' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on sign in feature</span>
+				<div class='pre'>Clicking on Sign In Feature[[ChromeDriver: chrome on WINDOWS (1a294ed53d7f4f5b07bd17e010a2f3da)] -> xpath: //a[contains(text(),'Sign In')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='71' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User Enter Email address on Email field "pdhanani44@hotmail.com"</span>
+				<div class='pre'>Enter Email address pdhanani44@hotmail.comOn Email address Field [[ChromeDriver: chrome on WINDOWS (1a294ed53d7f4f5b07bd17e010a2f3da)] -> xpath: //input[@id='email']]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='72' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User Enter Password on Password field "Nutickets123"</span>
+				<div class='pre'>Enter password Nutickets123On Password Field [[ChromeDriver: chrome on WINDOWS (1a294ed53d7f4f5b07bd17e010a2f3da)] -> xpath: //input[@id='password']]<br></div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='73' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on Sign In button</span>
+				<div class='pre'>Clicking on Sign in button [[ChromeDriver: chrome on WINDOWS (1a294ed53d7f4f5b07bd17e010a2f3da)] -> xpath: //button[contains(text(),'Sign In')]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='74' class='node when pass' status='pass'>
+			
+			<b>When</b>
+			
+			<span class="bdd-step-name">When User click on orders feature</span>
+				<div class='pre'>Clicking on orders Feature[[ChromeDriver: chrome on WINDOWS (1a294ed53d7f4f5b07bd17e010a2f3da)] -> xpath: //body/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/nav[1]/div[1]/div[4]/div[1]/div[1]/div[1]/div[1]/a[1]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='75' class='node and pass' status='pass'>
+			
+			<b>And</b>
+			
+			<span class="bdd-step-name">And User click on customer orders from given list of orders</span>
+				<div class='pre'>Clicking on Customer Report[[ChromeDriver: chrome on WINDOWS (1a294ed53d7f4f5b07bd17e010a2f3da)] -> xpath: //body/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[2]/div[2]/div[1]/ul[1]/li[2]/a[1]/span[1]/span[2]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+		<li test-id='76' class='node then pass' status='pass'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then User should see their order successfully</span>
+				<div class='pre'>Getting Customer Report[[ChromeDriver: chrome on WINDOWS (1a294ed53d7f4f5b07bd17e010a2f3da)] -> xpath: //body[1]/div[1]/div[1]/div[1]/div[1]/div[3]/main[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/h1[1]/span[1]]</div>
+				<div class='pre'>passed</div>
+			
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='77'>
+					<div class='test-heading'>
+						<span class='test-name'>Sign In functionality</span>
+						<span class='test-time'>Apr 6, 2021 12:18:30 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='scenariooutline node' test-id='78' status='pass'>
+	<span class='duration right label'>0h 0m 12s+700ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Verify user is able to Sign In with correct credentials</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='79' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@Regression</span>
+				<span class='category label white-text'>@Smoke,</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Verify user is able to Sign In with correct credentials</span>
+			
+				<ul class='steps'>
+					<li test-id='80' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is on nu web group home page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='81' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on sign in feature</span>
+							<div class='pre'>Clicking on Sign In Feature[[ChromeDriver: chrome on WINDOWS (8cc5e3ed1e6395491cb26d25eb8a0c61)] -> xpath: //a[contains(text(),'Sign In')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='82' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Enter Email address on Email field "pdhanani44@hotmail.com"</span>
+							<div class='pre'>Enter Email address pdhanani44@hotmail.comOn Email address Field [[ChromeDriver: chrome on WINDOWS (8cc5e3ed1e6395491cb26d25eb8a0c61)] -> xpath: //input[@id='email']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='83' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Enter Password on Password field "Nutickets123"</span>
+							<div class='pre'>Enter password Nutickets123On Password Field [[ChromeDriver: chrome on WINDOWS (8cc5e3ed1e6395491cb26d25eb8a0c61)] -> xpath: //input[@id='password']]<br></div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='84' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When User click on Sign In button</span>
+							<div class='pre'>Clicking on Sign in button [[ChromeDriver: chrome on WINDOWS (8cc5e3ed1e6395491cb26d25eb8a0c61)] -> xpath: //button[contains(text(),'Sign In')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='85' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should Sign In successfully</span>
+							<div class='pre'>Getting Welcome Message[[ChromeDriver: chrome on WINDOWS (8cc5e3ed1e6395491cb26d25eb8a0c61)] -> xpath: //h1[contains(text(),'Welcome, Pradip Dhanani')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+<div class='scenariooutline node' test-id='86' status='pass'>
+	<span class='duration right label'>0h 0m 23s+999ms</span>
+	<div class='desc'>
+		<b>ScenarioOutline</b>
+		<span class="desc-text">Verify user is not able to Sign In with incorrect credentials</span>
+	</div>
+	<ul class='steps'>
+		<li test-id='87' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@Regression</span>
+				<span class='category label white-text'>@Smoke,</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Verify user is not able to Sign In with incorrect credentials</span>
+			
+				<ul class='steps'>
+					<li test-id='88' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is on nu web group home page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='89' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on sign in feature</span>
+							<div class='pre'>Clicking on Sign In Feature[[ChromeDriver: chrome on WINDOWS (7a861128ce8e9e6900d40e5ff37ce32f)] -> xpath: //a[contains(text(),'Sign In')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='90' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Enter Email address on Email field "pdhana44@hotmail.com"</span>
+							<div class='pre'>Enter Email address pdhana44@hotmail.comOn Email address Field [[ChromeDriver: chrome on WINDOWS (7a861128ce8e9e6900d40e5ff37ce32f)] -> xpath: //input[@id='email']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='91' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Enter Password on Password field "Nutickets123"</span>
+							<div class='pre'>Enter password Nutickets123On Password Field [[ChromeDriver: chrome on WINDOWS (7a861128ce8e9e6900d40e5ff37ce32f)] -> xpath: //input[@id='password']]<br></div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='92' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When User click on Sign In button</span>
+							<div class='pre'>Clicking on Sign in button [[ChromeDriver: chrome on WINDOWS (7a861128ce8e9e6900d40e5ff37ce32f)] -> xpath: //button[contains(text(),'Sign In')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='93' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should not Sign In to system and shows Error message "These credentials do not match our records."</span>
+							<div class='pre'>Getting Sign In Error Message[[ChromeDriver: chrome on WINDOWS (7a861128ce8e9e6900d40e5ff37ce32f)] -> xpath: //p[contains(text(),'These credentials do not match our records.')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+		<li test-id='94' class='node scenario pass' status='pass'>
+			<div class='category-list'>
+				<span class='category label white-text'>@Regression</span>
+				<span class='category label white-text'>@Smoke,</span>
+			</div>
+			
+			<b>Scenario</b>
+			
+			<span class="bdd-step-name">Verify user is not able to Sign In with incorrect credentials</span>
+			
+				<ul class='steps'>
+					<li test-id='95' class='node given pass' status='pass'><b>Given</b>
+						<span class="bdd-step-name">Given User is on nu web group home page</span>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='96' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User click on sign in feature</span>
+							<div class='pre'>Clicking on Sign In Feature[[ChromeDriver: chrome on WINDOWS (cb87bba758a019f1a5efcffef13ad2ab)] -> xpath: //a[contains(text(),'Sign In')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='97' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Enter Email address on Email field "pdhanani44@hotmail.com"</span>
+							<div class='pre'>Enter Email address pdhanani44@hotmail.comOn Email address Field [[ChromeDriver: chrome on WINDOWS (cb87bba758a019f1a5efcffef13ad2ab)] -> xpath: //input[@id='email']]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='98' class='node and pass' status='pass'><b>And</b>
+						<span class="bdd-step-name">And User Enter Password on Password field "nutickets1234"</span>
+							<div class='pre'>Enter password nutickets1234On Password Field [[ChromeDriver: chrome on WINDOWS (cb87bba758a019f1a5efcffef13ad2ab)] -> xpath: //input[@id='password']]<br></div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='99' class='node when pass' status='pass'><b>When</b>
+						<span class="bdd-step-name">When User click on Sign In button</span>
+							<div class='pre'>Clicking on Sign in button [[ChromeDriver: chrome on WINDOWS (cb87bba758a019f1a5efcffef13ad2ab)] -> xpath: //button[contains(text(),'Sign In')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+					<li test-id='100' class='node then pass' status='pass'><b>Then</b>
+						<span class="bdd-step-name">Then User should not Sign In to system and shows Error message "These credentials do not match our records."</span>
+							<div class='pre'>Getting Sign In Error Message[[ChromeDriver: chrome on WINDOWS (cb87bba758a019f1a5efcffef13ad2ab)] -> xpath: //p[contains(text(),'These credentials do not match our records.')]]</div>
+							<div class='pre'>passed</div>
+					</li>
+				</ul>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Smoke</span>
+						<span class='category-status right'>
+							<span class='label pass'>2</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 2</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2021 12:16:39 AM</td>
+										<td class='linked' test-id='2'>Buy tickets for one or multiple events functionality.Verify user is able to Buy tickets for one or multiple events</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2021 12:18:10 AM</td>
+										<td class='linked' test-id='68'>Event attendance and order section functionality.Verify Event organiser can see Event attendance list and the orders section</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Sanity</span>
+						<span class='category-status right'>
+							<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2021 12:16:59 AM</td>
+										<td class='linked' test-id='12'>Check and download sales report functionality.Verify user is able to check and download sales report</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2021 12:17:24 AM</td>
+										<td class='linked' test-id='29'>Create events functionality.Verify User is able to create one or several events with at least one tickets type with limited stock.Verify User is able to create one or several events with at least one tickets type with limited stock</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2021 12:17:53 AM</td>
+										<td class='linked' test-id='54'>Create a new user role that can access all the Events functionality.Verify User is able to Create a new user role that can access all the Events, Venues and Orders</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Smoke,</span>
+						<span class='category-status right'>
+							<span class='label pass'>4</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 4</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2021 12:17:24 AM</td>
+										<td class='linked' test-id='29'>Create events functionality.Verify User is able to create one or several events with at least one tickets type with limited stock.Verify User is able to create one or several events with at least one tickets type with limited stock</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2021 12:18:30 AM</td>
+										<td class='linked' test-id='79'>Sign In functionality.Verify user is able to Sign In with correct credentials.Verify user is able to Sign In with correct credentials</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2021 12:18:45 AM</td>
+										<td class='linked' test-id='87'>Sign In functionality.Verify user is not able to Sign In with incorrect credentials.Verify user is not able to Sign In with incorrect credentials</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2021 12:18:56 AM</td>
+										<td class='linked' test-id='94'>Sign In functionality.Verify user is not able to Sign In with incorrect credentials.Verify user is not able to Sign In with incorrect credentials</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@Regression</span>
+						<span class='category-status right'>
+							<span class='label pass'>3</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 3</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Apr 6, 2021 12:18:30 AM</td>
+										<td class='linked' test-id='79'>Sign In functionality.Verify user is able to Sign In with correct credentials.Verify user is able to Sign In with correct credentials</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2021 12:18:45 AM</td>
+										<td class='linked' test-id='87'>Sign In functionality.Verify user is not able to Sign In with incorrect credentials.Verify user is not able to Sign In with incorrect credentials</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+									<tr>
+										<td>Apr 6, 2021 12:18:56 AM</td>
+										<td class='linked' test-id='94'>Sign In functionality.Verify user is not able to Sign In with incorrect credentials.Verify user is not able to Sign In with incorrect credentials</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Features
+					<div class='panel-lead'>6</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>8</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>83</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Apr 6, 2021 12:16:39 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Apr 6, 2021 12:19:14 AM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>155,025ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>User Name</td>
+								<td>Pradip</td>
+							</tr>
+							<tr>
+								<td>Time Zone</td>
+								<td>Europe/London</td>
+							</tr>
+							<tr>
+								<td>Machine</td>
+								<td>Windows 1064 Bit</td>
+							</tr>
+							<tr>
+								<td>Selenium</td>
+								<td>3.141.59</td>
+							</tr>
+							<tr>
+								<td>Maven</td>
+								<td>3.5.2</td>
+							</tr>
+							<tr>
+								<td>Java .Version</td>
+								<td>1.8.0_151</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>@Smoke</td>
+							<td>2</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Sanity</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Smoke,</td>
+							<td>4</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+						<tr>
+							<td>@Regression</td>
+							<td>3</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 6,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 8,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 0,
+				
+				passGrandChild: 83,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 			
+            
+        $(document).ready(function() {
+
+        });
+      
+        
+ 		</script>
+	</body>
+	
+</html>
